@@ -10,7 +10,29 @@
 </head>
 <body>
     <div>
-        This is the RsvpForm.cshtml View
+        <form asp-action="RsvpForm" method="post">
+            <p>
+                <label asp-for="Name">Your Name:</label>
+                <input asp-for="Name" />
+            </p>
+            <p>
+                <label asp-for="Email">Your Email:</label>
+                <input asp-for="Email" />
+            </p>
+            <p>
+                <label asp-for="Phone">Your Phone:</label>
+                <input asp-for="Phone" />
+            </p>
+            <p>
+                <label>Will you attend?</label>
+                <select asp-for="WillAttend">
+                    <option value="">Choose an option</option>
+                    <option value="true">Yes, I'll be there</option>
+                    <option value="no">No, I can't come'</option>
+                </select>
+            </p>
+            <button type="submit">Submit your reservation</button>
+        </form>
     </div>
 </body>
 </html>
